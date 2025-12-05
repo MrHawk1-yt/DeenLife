@@ -79,7 +79,6 @@ export type ViewState =
   | 'islamic-info'
   | 'prayer-times' 
   | 'qibla-finder' 
-  | 'ask-ai'
   | 'settings'
   | 'profile'
   | 'contact'
