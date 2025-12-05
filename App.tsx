@@ -4,7 +4,6 @@ import { Sidebar } from './components/Sidebar';
 import { Dashboard } from './views/Dashboard';
 import { PrayerTimes } from './views/PrayerTimes';
 import { Habits } from './views/Habits';
-import { AskAI } from './views/AskAI';
 import { Landing } from './components/Landing';
 import { Settings } from './views/Settings';
 import { QuranAudio } from './views/QuranAudio';
@@ -88,8 +87,6 @@ function App() {
         return <PrayerTimes />;
       case 'sunnah-habits':
         return <Habits lang={settings.language} />;
-      case 'ask-ai':
-        return <AskAI />;
       case 'hadith-collection':
         return <HadithCollection lang={settings.language} />;
       case 'dua-collection':
