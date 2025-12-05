@@ -1,20 +1,40 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# DeenLife App
 
-# Run and deploy your AI Studio app
+A comprehensive Islamic lifestyle companion built with React, TypeScript, and Tailwind CSS.
 
-This contains everything you need to run your app locally.
+## Deployment Instructions
 
-View your app in AI Studio: https://ai.studio/apps/drive/1sog9beIqKxpBzzVh8HvJFjN-4ycsnq6q
+Since you want to host this on your own platform (WordPress/cPanel/etc.), follow these steps:
 
-## Run Locally
+### 1. Prerequisites
+You need **Node.js** installed on your computer to build the final optimized files.
 
-**Prerequisites:**  Node.js
+### 2. Install & Build
+1. Download all the files from the code editor.
+2. Open a terminal in the project folder.
+3. Run `npm install` to install dependencies.
+4. Run `npm run build`.
 
+### 3. Upload to Hosting
+1. After building, a `dist` folder will be created.
+2. This `dist` folder contains the final `index.html` and optimized JavaScript files.
+3. Upload the **contents** of the `dist` folder to your web server (e.g., inside `public_html/deenlife` or your WordPress directory).
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### 4. Configuration
+- **API Key**: The AI features (Gemini) require an API Key.
+  - Open `services/geminiService.ts` before building.
+  - Replace `process.env.API_KEY` with your actual key string: `apiKey: "YOUR_ACTUAL_KEY_HERE"`.
+  - **Security Warning**: Since this is a client-side app, your API key will be visible to users who inspect the code. It is recommended to restrict the API key in Google Cloud Console to only allow requests from your specific domain (e.g., `yourwebsite.com`).
+
+### 5. Hosting on WordPress
+- You can simply upload the `dist` files to a folder on your server.
+- Link to that folder from your WordPress menu (e.g., `https://yoursite.com/apps/deenlife`).
+
+## Features
+- **Prayer Times**: Accurate calculations based on location.
+- **Quran Tracker**: Track reading progress.
+- **Quran Audio**: Listen to top reciters.
+- **Hadith & Dua**: Extensive collections with search.
+- **AI Assistant**: Powered by Google Gemini.
+- **Qibla Finder**: Real-time compass.
+- **Sunnah Habits**: Daily tracker.
