@@ -1,0 +1,7 @@
+{
+  "name": "DeenLife",
+  "description": "A comprehensive Islamic lifestyle companion featuring prayer times, habit tracking, AI assistance, and spiritual resources.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
